@@ -8,7 +8,7 @@ import {CricServiceService} from '../cric-service.service';
 })
 export class AllMatchesComponent implements OnInit {
 
-  result :any[];
+  matches;
   constructor(private service:CricServiceService) {
 
   }
@@ -16,6 +16,8 @@ export class AllMatchesComponent implements OnInit {
   ngOnInit() {
     this.service.getAllMatch().subscribe((data)=>{
       console.log(data);
+      this.matches = data;
+      console.log(this.matches)
     });
   }
 

@@ -1,3 +1,12 @@
-<p>
-  all-matches works!
-</p>
+<div class="container">
+  <div class="well" *ngFor="let match of matches">
+    <div class="row">
+      <div class="col-md-10">
+          {{match.t1}} VS {{match.t2}}      
+      </div>
+      <div class="col-md-1">
+          <button class="btn btn-primary" style="display:block"><a href="/match/{{match.id}}">View Score</a></button>
+      </div>
+    </div>
+  </div>
+</div>
