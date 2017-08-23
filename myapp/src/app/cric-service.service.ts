@@ -17,4 +17,9 @@ export class CricServiceService {
             .map(res=>res.json());
     }
 
+    getMatchScore(id){
+      return  this.http.get(this.baseUrl + '?id=' + id)
+              .map(res=>res.json())
+    }
+
 }
