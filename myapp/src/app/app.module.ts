@@ -10,12 +10,14 @@ import { AllMatchesComponent } from './all-matches/all-matches.component';
 import {CricServiceService} from './cric-service.service';
 import { MatchComponent } from './match/match.component';
 import {routing} from './app.routing';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllMatchesComponent,
-    MatchComponent
+    MatchComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
