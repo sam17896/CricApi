@@ -27,7 +27,7 @@ export class MatchComponent implements OnInit {
           console.log(data)
           $this.match = data[0]
         })
-      },3000)
+      },10000)
 
 
 

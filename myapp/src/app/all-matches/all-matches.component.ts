@@ -14,11 +14,10 @@ export class AllMatchesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getAllMatch().subscribe((data)=>{
-      console.log(data);
-      this.matches = data;
-      console.log(this.matches)
-    });
+    this.service.getAllMatch().subscribe(res=>{
+      this.matches = res;
+    }
+    )
   }
 
 }
