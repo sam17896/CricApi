@@ -4,10 +4,12 @@ import {HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import { AllMatchesComponent } from './all-matches/all-matches.component';
 import { CricapiService } from './cricapi.service';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AllMatchesComponent
+    AllMatchesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

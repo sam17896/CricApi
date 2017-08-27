@@ -1,3 +1,9 @@
-<p>
-  all-matches works!
-</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let match of matches">
+        <div class="well">
+          <p>{{match.srs}}</p>
+        </div>
+    </div>
+  </div>
+</div>

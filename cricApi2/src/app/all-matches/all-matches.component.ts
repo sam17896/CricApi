@@ -14,7 +14,7 @@ export class AllMatchesComponent implements OnInit {
   ngOnInit() {
     this.service.getAllMatches().subscribe(data=>{
       console.log(data)
-      this.matches = data;
+      this.matches = data.match;
       console.log(this.matches)
     })
   }
