@@ -17,7 +17,7 @@ module.exports = {
                 completeResponse += chunk;
             });
             response.on('end', function() {
-                console.log(JSON.stringify(completeResponse));
+              //  console.log(JSON.stringify(completeResponse));
                 parseString(completeResponse, function (err, result) {
                     res.send(result);
                 });                

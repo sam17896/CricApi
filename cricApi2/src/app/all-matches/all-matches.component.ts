@@ -12,11 +12,15 @@ export class AllMatchesComponent implements OnInit {
   constructor(private service:CricapiService) { }
 
   ngOnInit() {
-    this.service.getAllMatches().subscribe(data=>{
-      console.log(data)
-      this.matches = data.mchdata.match;
-      console.log(this.matches)
-    })
+    var $this = this
+    setInterval(function(){
+      $this.service.getAllMatches().subscribe(data=>{
+        console.log(data)
+        $this.matches = data.mchdata.match;
+        console.log($this.matches)
+      })
+  
+    },10000)
   }
 
 }

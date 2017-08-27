@@ -9,6 +9,7 @@
           <div *ngIf="match.mscr">
             <h3>Score:</h3>
             <p>{{match.mscr[0].btTm[0].$.sName}}: {{match.mscr[0].btTm[0].Inngs[0].$.r}}/{{match.mscr[0].btTm[0].Inngs[0].$.wkts}} in {{match.mscr[0].btTm[0].Inngs[0].$.ovrs}} Overs</p>
+            <p *ngIf="match.mscr[0].blgTm">{{match.mscr[0].blgTm[0].$.sName}}: {{match.mscr[0].blgTm[0].Inngs[0].$.r}}/{{match.mscr[0].blgTm[0].Inngs[0].$.wkts}} in {{match.mscr[0].blgTm[0].Inngs[0].$.ovrs}} Overs</p> 
           </div>
           <p>{{match.state[0].$.mchState}}: {{match.state[0].$.status}}</p>
           <p *ngIf="match.manofthematch">Man of The Match: {{match.manofthematch[0].mom[0].$.Name}}
