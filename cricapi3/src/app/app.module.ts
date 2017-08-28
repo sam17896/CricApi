@@ -2,15 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import {HttpModule} from '@angular/http';
+import { AllSeriesComponent } from './all-series/all-series.component';
+import {CricService} from './cric.service';
+import {routing} from './app.routing';
+import { NavbarComponent } from './navbar/navbar.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AllSeriesComponent,
+    NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing,
+    HttpModule
   ],
-  providers: [],
+  providers: [CricService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
