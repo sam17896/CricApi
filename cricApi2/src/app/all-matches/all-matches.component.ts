@@ -20,7 +20,7 @@ export class AllMatchesComponent implements OnInit {
         console.log($this.matches)
       })
   
-    },10000)
+    },30000)
   }
 
 }
