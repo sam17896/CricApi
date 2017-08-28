@@ -43,6 +43,21 @@ module.exports = {
         }).on('error', function (e) {
             console.log('problem with request: ' + e.message);
         });
+    },
+    ongoingseries:function(req,res){
+        var url = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20cricket.series.ongoing&format=json&diagnostics=true&env=store%3A%2F%2F0TxIGQMQbObzvU4Apia0V0&callback=';
+        var gsaReq = https.get(url, function (response) {
+            var completeResponse = '';
+            response.on('data', function (chunk) {
+                completeResponse += chunk;
+            });
+            response.on('end', function() {
+              //  console.log(JSON.stringify(completeResponse));
+                res.send(completeResponse);
+            })
+        }).on('error', function (e) {
+            console.log('problem with request: ' + e.message);
+        });
     }
 };
 

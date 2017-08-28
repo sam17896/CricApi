@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let ser of series"  class="well">
+        <h1>{{ser.SeriesName}}</h1>
+        <p>From: {{ser.StartDate}} - {{ser.EndDate}}</p>
+        <h3>{{ser.Participant.Team[0].Name}} VS {{ser.Participant.Team[1].Name}}</h3>
+        <h1>Schedule: </h1>
+        <div *ngIf="ser.Schedule.Match[0]">
+          <div *ngFor="let sch of ser.Schedule.Match">
+            <p>{{sch.MatchNo}}: {{sch.Venue.content}}</p>
+            <p>{{sch.StartDate}}</p>
+            <br>
+          </div>
+        </div>
+        <div *ngIf="!ser.Schedule.Match[0]">
+            <div>
+              <p>{{ser.Schedule.Match.MatchNo}}: {{ser.Schedule.Match.Venue.content}}</p>
+              <p>{{ser.Schedule.Match.StartDate}}</p>
+              <br>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>

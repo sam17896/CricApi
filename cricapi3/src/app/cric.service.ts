@@ -13,4 +13,8 @@ export class CricService {
     return this.http.get('http://localhost:1338/livescore/series').map(res=>res.json());
   }
 
+  public getOnGoing(){
+    return this.http.get('http://localhost:1338/livescore/ongoingseries').map(res=>res.json());  
+  }
+
 }
